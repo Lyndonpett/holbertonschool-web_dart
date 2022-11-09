@@ -22,11 +22,11 @@ int whoWins(Map<String, int> team1, Map<String, int> team2) {
     }
   });
 
-  if (team1Score > team2Score) {
+  if (team1Score == team2Score) {
+    return 0;
+  } else if (team1Score > team2Score) {
     return 1;
-  }
-  if (team1Score < team2Score) {
+  } else if (team1Score < team2Score) {
     return 2;
   }
-  return 0;
 }

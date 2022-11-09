@@ -29,4 +29,5 @@ int whoWins(Map<String, int> team1, Map<String, int> team2) {
   } else if (team1Score < team2Score) {
     return 2;
   }
+  return 0;
 }

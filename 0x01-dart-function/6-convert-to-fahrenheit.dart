@@ -1,12 +1,12 @@
-List<double> convertToF(List<double> temperaturesInC) {
+List<String> convertToF(List<double> temperaturesInC) {
   // All the results should be rounded to two decimal points.
-  List<double> results = [];
+  List<String> results = [];
   for (double temp in temperaturesInC) {
-    double result = double.parse(((temp * 9 / 5) + 32).toStringAsFixed(2));
+    String result = (temp * 9 / 5 + 32).toStringAsFixed(2);
 
     // check if result has two decimal points, if not add another decimal point
-    if (result.toString().split('.')[1].length == 2) {
-      result = double.parse(result.toString() + '0');
+    if (result.toString().split('.')[1].length == 1) {
+      result = result + '0';
     }
     results.add(result);
   }

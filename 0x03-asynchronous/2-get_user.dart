@@ -6,8 +6,7 @@ import '2-main.dart';
 
 Future<void> getUser() async {
   try {
-    final user = await fetchUser();
-    print(user);
+    print(await fetchUser());
   } catch (e) {
     print('error caught: $e');
   }

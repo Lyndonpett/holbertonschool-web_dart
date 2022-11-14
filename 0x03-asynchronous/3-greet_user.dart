@@ -1,3 +1,4 @@
+import 'dart:convert';
 // Create a function greetUser() that returns a string as follows “hello ”.
 // Function prototype : Future<String> greetUser()
 // Gets the user data by calling the provided function fetchUserData()
@@ -20,8 +21,9 @@ Future<bool> checkCredentials() =>
 
 Future<String> greetUser() async {
   try {
-    final user = await fetchUserData();
-    return 'hello $user';
+    var userData = await fetchUserData();
+    var user = jsonDecode(userData);
+    return 'Hello ${user['username']}';
   } catch (e) {
     return 'error caught: $e';
   }

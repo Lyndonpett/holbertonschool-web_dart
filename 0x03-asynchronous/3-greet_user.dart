@@ -23,7 +23,7 @@ Future<String> greetUser() async {
   try {
     var userData = await fetchUserData();
     var user = jsonDecode(userData);
-    return '${user['username']}';
+    return '${user['username']}\n';
   } catch (e) {
     return 'error caught: $e';
   }

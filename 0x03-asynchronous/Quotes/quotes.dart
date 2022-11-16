@@ -16,6 +16,6 @@ Future<String> generateQuote(id) async {
     var quotes = jsonDecode(resp.body);
     return "${quotes[0]['author']} : ${quotes[0]['quote']}";
   } catch (err) {
-    return "There is no quotes";
+    return "There are no quotes";
   }
 }
